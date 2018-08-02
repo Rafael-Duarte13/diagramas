@@ -1,0 +1,17 @@
+*Modelo lógico
+	Etapa1= 1-N
+		1- Criar uma cópia do atributo determinante do lado (1).
+		2- Colocar a cópia do atributo gerado no lado (N).
+		3- Torna-lo um atributo simples.
+	Etapa2= Redundâncias
+		1- Criar uma nova entidade com um nome do atributo em redundância no plural.
+		2- Mover o atributo em redundância para a novo entidade.
+		3- Torna-lo um atributo simples.
+		4- Criar um determinante para a novo entidade.
+		5- Fazer uma relação da entidade nova com a que gerou-a.
+		6- Definir cardinalidade "1" para a nova e "n" para a antiga.
+		7- Proceder a regra do 1:n.
+	Etapa3= Multivaloração
+	Etapa4= N-N
+	Etapa5= Autorelacionamento
+	Etapa6= Particionamento
