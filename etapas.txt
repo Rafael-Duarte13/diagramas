@@ -9,9 +9,21 @@
 		3- Torna-lo um atributo simples.
 		4- Criar um determinante para a novo entidade.
 		5- Fazer uma relação da entidade nova com a que gerou-a.
-		6- Definir cardinalidade "1" para a nova e "n" para a antiga.
+		6- Definir cardinalidade: (1)Para a nova e (n)Para a antiga.
 		7- Proceder a regra do 1:n.
 	Etapa3= Multivaloração
+		1- Criar uma nova entidade com o nome do atributo multivalorado junto com a entidade
+		de origem no plural.
+		2- Mover o atributo multivalorado para a nova entidade.
+		3- Tornar o atributo multivalorado em simples.
+		4- Criar uma relação da entidade nova para a antiga.
+		5- Definir cardinalidade: (1)Para a antiga e (n)Para a nova.
+		6- Proceder a regra do 1:n.
+		7- Tornar os dois atributos da nova entidade determinantes.
 	Etapa4= N-N
+		1- Remover o relacionamento e convertê-lo numa entidade.
+		2- Relacionar com as entidades antigas.
+		3- Definir a cardinalidade das novas relações.
+		4- Proceder a regra do 1:n.
 	Etapa5= Autorelacionamento
 	Etapa6= Particionamento
