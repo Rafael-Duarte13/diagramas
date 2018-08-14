@@ -8,11 +8,27 @@ Banco de dados
  CREATE - criar
  DROP - excluir
  ALTER - alterar
+  EX=
+ 
 
  ???
  INSET
+  EX=
+ INSERT INTO [tabela]
+	(campos)
+ VALUES
+	(valores na ordem dos campos);
+
  DELET
+  EX=
+ DELETE FROM [tabela]
+ WHERE campo = valor
+
  UPDATE
+  EX=
+ UPDATE [tabela] SET
+ campo = valor
+ WHERE campo = valor;
 
 =================================================
  Criar um banco de dados:
@@ -40,3 +56,39 @@ Banco de dados
  VALUES
 	('MASCULINO', 'M'),
 	('FEMININO', 'F');
+
+ Exibir tabela:
+  EX=
+ SELECT * FROM [tabela];
+  OU
+ SELECT * FROM [tabela] WHERE campo = valor;
+ SELECT * FROM [tabela] WHERE FIL_ID BETWEEN inicio AND fim;
+ SELECT * FROM [tabela] WHERE FIL_ID IN valores;
+ SELECT * FROM [tabela] WHERE FIL_TITULO LIKE ('%SEU%');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ CONSTRAINT UNIQUE KEY(CLI_CPF)
