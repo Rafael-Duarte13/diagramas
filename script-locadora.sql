@@ -19,7 +19,7 @@ VALUES
 CREATE TABLE IF NOT EXISTS TB_CATEGORIAS(
 	CAT_ID TINYINT UNSIGNED NOT NULL AUTO_INCREMENT, 
     CAT_NOME VARCHAR(25) NOT NULL, 
-    CAT_PRECO DECIMAL(2,2) NOT NULL, 
+    CAT_PRECO DECIMAL(4,2) NOT NULL, 
     CONSTRAINT PRIMARY KEY(CAT_ID)
 );
 
@@ -45,7 +45,13 @@ VALUES
     ('COMÉDIA'),
     ('DRAMA'),
     ('ROMANCE'),
-    ('TERROR');
+    ('TERROR'),
+    ('FANTASIA'),
+    ('BIOGRAFIA'),
+    ('ÉPICO'),
+    ('ESPIONAGEM'),
+    ('FICÇÃO CIENTIFICA'),
+    ('FAMILIA');
     
 CREATE TABLE IF NOT EXISTS TB_CLASSIFICACOES(
 	CLA_ID TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -71,14 +77,31 @@ CREATE TABLE IF NOT EXISTS TB_ATORES(
 INSERT INTO TB_ATORES
 	(ATO_NOME)
 VALUES
-	('NICOLAS CAGE'),
-    ('BRAD PITT'),
-    ('ADAM SANDLER'),
-    ('JULIA ROBERTS'),
+	('ELIJAH WOOD'),
+    ('SEAN ASTIN'),
+    ('LAN MCKELLEN'),
+    ('RICHARD GERE'),
+    ('JOAN ALLEN'),
+    ('TOM CRUISE'),
+    ('HENRY CAVILL'),
+    ('REBECCA FERGUSON'),
+    ('PAUL RUDD'),
+    ('EVANGELINE LILLY'),
+    ('MICHAEL PEÑA'),
+    ('CRAIG T. NELSON'),
+    ('HOLLY HUNTER'),
+    ('HUCK MILNER'),
     ('ROBERT DE NIRO'),
-    ('DENZEL WASHINGTON'),
-    ('BRUCE WILLIS'),
-    ('JOHN WAYNE');
+    ('CUBA GOODING JR.'),
+    ('ANDREW GARFIELD'),
+    ('VINCE VAUGHN'),
+    ('RUSSELL CROWE'),
+    ('JOAQUIN PHOENIX'),
+    ('DANIEL RADCLIFFE'),
+    ('RUPERT GRINT'),
+    ('ALBERT BROOKS'),
+    ('ELLEN DEGENERES'),
+    ('ALEXANDER GOULD');
     
 CREATE TABLE IF NOT EXISTS TB_DIRETORES(
 	DIR_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -89,14 +112,17 @@ CREATE TABLE IF NOT EXISTS TB_DIRETORES(
 INSERT INTO TB_DIRETORES
 	(DIR_NOME)
 VALUES
-	('MICHAEL HENEKE'),
-    ('PEDRO ALMODÓVAR'),
-    ('MARTIN SCORSESE'),
-    ('FEDERICO FELLINI'),
-    ('ALFRED HITCHCOCK'),
-    ('QUENTIN TARANTINO'),
-    ('ROMAN POLANSKI'),
-    ('WOODY ALLEN');
+	('PETER JACKSON'),
+    ('LASSE HALLSTROM'),
+    ('CHRISTOPHER MCQUARRIE'),
+    ('PEYTON REED'),
+    ('BRAD BIRD'),
+    ('GEORGE TILLMAN JR.'),
+    ('MEL GIBSON'),
+    ('RIDLEY SCOTT'),
+    ('ALFONSO CUARÓN'),
+    ('ANDREW STANTON'),
+    ('LEE UNKRICH');
     
 CREATE TABLE IF NOT EXISTS TB_FILMES(
 	FIL_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -136,18 +162,16 @@ CREATE TABLE IF NOT EXISTS TB_GENEROS_FILMES(
 INSERT INTO TB_GENEROS_FILMES
 	(GDF_FIL_ID, GDF_GEN_ID)
 VALUES
-	(1, 1), (1, 8),
-    (2, 9),
-    (3, 1),
-    (4, 1), (4, 8), (4, 3),
-    (5, 2), (5, 10),
-    (6, 9), (6, 11),
-    (7, 9), (7, 11),
-    (8, 12), (8, 3),
-    (9, 13), (9, 3),
+	(1, 8), (1, 3),
+    (2, 5),
+    (3, 1), (3, 11),
+    (4, 1), (4, 12), (4, 3),
+    (5, 2), (5, 13),
+    (6, 5), (6, 9),
+    (7, 5), (7, 9),
+    (8, 10), (8, 3),
+    (9, 8), (9, 3),
     (10, 2), (10, 3);
-
-USE DB_LOCADORA;
     
 CREATE TABLE IF NOT EXISTS TB_PAISES(
 	PAI_ID TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -181,16 +205,16 @@ CREATE TABLE IF NOT EXISTS TB_DIRETORES_FILMES(
 INSERT INTO TB_DIRETORES_FILMES
 	(DDF_FIL_ID, DDF_DIR_ID)
 VALUES
-	(1, 9),
-    (2, 10),
-    (3, 11),
-    (4, 12),
-    (5, 13),
-    (6, 14),
-    (7, 15),
-    (8, 16),
-    (9, 17),
-    (10, 18), (10, 19);
+	(1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (6, 6),
+    (7, 7),
+    (8, 8),
+    (9, 9),
+    (10, 10), (10, 11);
     
 CREATE TABLE TB_ATORES_FILMES(
 	ADF_FIL_ID INT UNSIGNED NOT NULL,
@@ -203,16 +227,16 @@ CREATE TABLE TB_ATORES_FILMES(
 INSERT INTO TB_ATORES_FILMES
 	(ADF_FIL_ID, ADF_ATO_ID)
 VALUES
-	(1, 9), (1, 10), (1, 11), (1, 12), (1, 13), (1, 14), (1, 15), (1, 16),
-    (2, 17), (2, 18), (2, 19),
-    (3, 20), (3, 21), (3, 22),
-    (4, 23), (4, 24), (4, 25),
-    (5, 26), (5, 27), (5, 28),
-    (6, 5), (6, 29),
-    (7, 30), (7, 31),
-    (8, 32), (8, 33),
-    (9, 36), (9, 37),
-    (10, 38), (10, 39);
+	(1, 1), (1, 2), (1, 3),
+    (2, 4), (2, 5),
+    (3, 6), (3, 7), (3, 8),
+    (4, 9), (4, 10), (4, 11),
+    (5, 12), (5, 13), (5, 14),
+    (6, 15), (6, 16),
+    (7, 17), (7, 18),
+    (8, 19), (8, 20),
+    (9, 21), (9, 22),
+    (10, 23), (10, 24), (10, 25);
     
 CREATE TABLE IF NOT EXISTS TB_STATUS(
 	STT_ID TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
