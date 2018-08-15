@@ -66,6 +66,11 @@ Banco de dados
  SELECT * FROM [tabela] WHERE FIL_ID IN valores;
  SELECT * FROM [tabela] WHERE FIL_TITULO LIKE ('%SEU%');
 
+SELECT
+FROM
+WHERE
+ORDER BY
+
 
 
 
