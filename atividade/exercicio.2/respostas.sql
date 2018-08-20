@@ -1,0 +1,80 @@
+USE DB_LOJA_MANHA;
+
+-- 1°
+SELECT 
+    DEP_NOME AS 'NOME DO DEPARTAMENTO',
+    PRO_DES_PRODUTO AS 'DESCRIÇÃO DO PRODUTO',
+    PRO_PRECO AS 'VALOR DO PRODUTO',
+    DEP_DESCONTO AS 'DESCONTO'
+FROM
+    TB_DEPARTAMENTOS
+        JOIN
+    TB_PRODUTOS ON DEP_CODIGO = PRO_DEP_CODIGO
+WHERE
+    PRO_QT_ESTOQUE > PRO_QT_MINIMA
+ORDER BY DEP_NOME ASC;
+
+-- 2°
+SELECT 
+    DEP_NOME AS 'NOME DO DEPARTAMENTO',
+    PRO_DES_PRODUTO AS 'DESCRIÇÃO DO PRODUTO',
+    PRO_PRECO AS 'VALOR PRODUTO',
+    DEP_DESCONTO AS 'DESCONTO'
+FROM
+    TB_DEPARTAMENTOS
+        JOIN
+    TB_PRODUTOS ON DEP_CODIGO = PRO_DEP_CODIGO
+WHERE
+    DEP_NOME = 'CALÇADOS';
+
+-- 3°
+SELECT 
+    CLI_NOME, TEC_TELEFONE
+FROM
+    TB_CLIENTES
+        JOIN
+    TB_TEL_CLIENTES ON CLI_CODIGO = TEC_CLI_CODIGO
+WHERE
+    CLI_BAI_CODIGO IN ((SELECT 
+            BAI_CODIGO
+        FROM
+            TB_BAIRROS
+        WHERE
+            BAI_BAIRRO = 'TIROL') , (SELECT 
+                BAI_CODIGO
+            FROM
+                TB_BAIRROS
+            WHERE
+                BAI_BAIRRO = 'ALECRIM'),
+        (SELECT 
+                BAI_CODIGO
+            FROM
+                TB_BAIRROS
+            WHERE
+                BAI_BAIRRO = 'RIBEIRA'));
+
+-- 4° x
+
+-- 5°
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
