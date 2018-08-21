@@ -1,3 +1,4 @@
+-- Lista.2
 USE DB_LOJA_MANHA;
 
 -- 1°
@@ -145,29 +146,10 @@ WHERE
 
 -- 10°
 SELECT 
-    *
+    FUN_NOME
 FROM
     TB_FUNCIONARIOS
         LEFT JOIN
     TB_VENDAS ON FUN_MATRICULA = VEN_FUN_MATRICULA
 WHERE
     VEN_ID IS NULL;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

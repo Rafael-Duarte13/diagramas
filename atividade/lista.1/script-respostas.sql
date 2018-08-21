@@ -1,3 +1,4 @@
+-- Lista.1
 USE DB_LOJA_MANHA;
 
 -- 1°
