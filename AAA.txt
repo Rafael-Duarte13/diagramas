@@ -1,0 +1,10 @@
+CRUD
+   D - DELETE (DELETE)
+   U - UPDATE (UPDATE)
+   R - READ (SELECT)
+   C - CREATE (INSERT)
+
+DAO
+   O - OBJECT
+   A - ACCESS
+   D - DATA

@@ -42,7 +42,7 @@ ORDER BY mar_id;
 
 -- 4°
 SELECT
-	*
+	for_nome_fantasia, com_total_compra
 FROM
     tb_fornecedores
         left JOIN
